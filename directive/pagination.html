@@ -1,0 +1,46 @@
+<h1>Todos</h1>
+<h4>{{todos.length}} total</h4>
+<ul>
+    <li ng-repeat="todo in filteredTodos">{{todo.text}}</li>
+</ul>
+
+<div id="pagination-container" style="text-align: center;">
+    <pagination ng-model="currentPage" total-items="todos.length" max-size="maxSize" boundary-links="true"></pagination>
+</div>
+
+
+
+<!-- ========================= post example matches alternative code on Ctrl (see notes on paginationCtrl.js) ===================== -->
+
+<!-- <h4>{{posts.length}} total</h4>
+
+    <div class="post-container" ng-repeat="post in filteredPosts">
+           <div class="post-title">{{post.title}}</div>
+           <div class="post-subtitle">
+               {{post.subtitle}}
+           </div>
+           <div class="post-date">Posted {{post.date}}</div>
+          <div style="text-align: justify-all;" marked="post.fullpost"></div>
+       </div> -->
+<!-- "marked" attribute linked to angular-marked https://github.com/Hypercubed/angular-marked/blob/master/README.md -->
+
+
+<!-- <ul>
+      <li ng-repeat="post in filteredPosts">
+         <div class="post-container">
+         <div class="post-title">{{post.title}}</div>
+         <div class="post-subtitle">{{post.subtitle}}</div>
+         <div class="post-date">{{post.date}}</div>
+         <div class="post-full">{{post.fullpost}}</div>
+         </div>
+      </li>
+    </ul> -->
+
+<!-- <div class="pagination-container">
+    <pagination
+      ng-model="currentPage"
+      total-items="posts.length"
+      max-size="maxSize"
+      boundary-links="true">
+    </pagination>
+    </div> -->
